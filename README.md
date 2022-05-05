@@ -1,6 +1,3 @@
-
-# Movies-ETL
-
 # Movies-ETL
 
 ## Background Information
