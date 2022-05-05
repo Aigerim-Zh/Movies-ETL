@@ -54,3 +54,6 @@ The initial work on the datasets was done in [this one file](https://github.com/
 - Creating the Movie Database.  
 - The function ```extract_transform_load``` performs the last step of connecting to the SQL database using ```to_sql``` method of the ```sqlalchemy``` library.
 - The final code executes the whole ETL pipeline.
+- The database consists of the following tables:
+![](https://github.com/Aigerim-Zh/Movies-ETL/blob/main/Resources/movies_query.png)
+![](https://github.com/Aigerim-Zh/Movies-ETL/blob/main/Resources/ratings_query.png)
