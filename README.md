@@ -1,7 +1,7 @@
 # Movies-ETL
 
 ## Background Information
-AmazingPrime video is a platform for streaming videos and TV shows. The company wants to develop an algorithm to predict which low-budget movies being released will become popular, so they can buy the streaming rights at a bargain. AmazingPrime decided to sponsor a hackathon providing a clean dataset of movie data and asking participants to predict the popular pictures. 
+AmazingPrime video is a platform for streaming videos and TV shows. The company wants to develop an algorithm to predict which low-budget movies being released will become popular, so they can effectively buy the streaming rights. AmazingPrime decided to sponsor a hackathon providing a clean dataset of movie data and asking participants to make these predictions. 
 
 ## Purpose 
 We are tasked with creating the datasets for this hackathon. We will create an automated ETL (Extract, Transform, and Load) pipeline to ensure that the data follows a consistent and robust data structure. 
@@ -11,8 +11,9 @@ We are tasked with creating the datasets for this hackathon. We will create an a
 ### Extract 
 The data was extracted from two sources:
 - **Scarped Wikipedia movie data** stored as a JSON file. The file contains movie information between 1990 and 2018 such as but not limited to, movie titles and languages, budget and box office returns, cast and crew, production and distribution. The dataset has 7,311 records. 
+- **Kaggle MovieLens ratings dataset** with over 20 million reviews and **Kaggle metadata** containing details about the movies for which the reviews were given. Both datasets come in CSV formats.
+- The raw data could not be uploaded to this repository due to its large size. 
 
-- **Kaggle MovieLens ratings dataset** with over 20 million reviews and **Kaggle metadata** containing details about the movies for which the reviews were given. Both datasets come in CSV formats. 
 
 ### Transform
 Cleaning of data was done using Pandas and Python RegEx module. Wikipedia does not have strict data presentation standards, so a lot of cleaning needs to be done. Kaggle metadata and rating data also require cleaning and transformations. We need to organize and merge data in a structured format before we can send it to SQL. 
