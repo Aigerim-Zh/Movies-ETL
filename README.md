@@ -22,8 +22,7 @@ Cleaning of data was done using Pandas and Python RegEx module. Wikipedia does n
 Using PostgreSQL and pgAdmin, the final merged datasets need to be sent to SQL. 
 
 ## Results
-
-The initial work on the datasets was done in (this one file)[]. As a part of the project, the code was refactored to the following deliverables:
+The initial work on the datasets was done in [this one file](https://github.com/Aigerim-Zh/Movies-ETL/blob/main/Exploratory%20data%20analysis.ipynb). As a part of the project, the code was refactored to the following deliverables:
 
 [Deliverable 1](https://github.com/Aigerim-Zh/Movies-ETL/blob/main/ETL_Deliverable1_function_test.ipynb). 
 - Write a function ```extract_transform_load``` that reads in the three data files and creates three separate DataFrames.  
