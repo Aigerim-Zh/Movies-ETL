@@ -25,30 +25,32 @@ Using PostgreSQL and pgAdmin, the final merged datasets need to be sent to SQL.
 The initial work on the datasets was done in [this one file](https://github.com/Aigerim-Zh/Movies-ETL/blob/main/Exploratory%20data%20analysis.ipynb). As a part of the project, the code was refactored to the following deliverables:
 
 [Deliverable 1](https://github.com/Aigerim-Zh/Movies-ETL/blob/main/ETL_Deliverable1_function_test.ipynb). 
-- Write a function ```extract_transform_load``` that reads in the three data files and creates three separate DataFrames.  
+- Writing a function ```extract_transform_load``` that reads in the three data files and creates three separate DataFrames.  
     - Extracting data in JSON and CSV formats.
     - CSV files are already in flat-file formats, we will put them into Pandas DataFrames directly.
     - Load the JSON file and read it in as a list of dictionaries in Pandas and then converted it into a Pandas DataFrame. 
 
 [Deliverable 2](https://github.com/Aigerim-Zh/Movies-ETL/blob/main/ETL_Deliverable2_clean_wiki_movies.ipynb)
-- Extract and transform the Wikipedia data to merge it with the Kaggle metadata. 
+- Extracting and transforming the Wikipedia data to merge it with the Kaggle metadata. 
 - Creating function ```clean_movie``` that combines alternative movie titles into one column ```alt_titles```.
 - Creating a sub-function ```change_column_name``` to put columns in a consistent pattern. 
 - In the ```extract_transform_load``` function, the Wikipedia movie data is transformed using:
     - Python list comprehensions
     - Python RegEx module for regular expressions
-    - lambda functions
-- Redundant columns are dropped.
-- Duplicates dropped.
-- The dataset filtered out TV shows. 
+    - Lambda functions
+- Dropping redundant columns.
+- Dropping duplicates.
+- Filtering out TV shows. 
 
 [Deliverable 3](https://github.com/Aigerim-Zh/Movies-ETL/blob/main/ETL_Deliverable3_clean_kaggle_data.ipynb)
-- Extract and transform the Kaggle data into separate DataFrames. The function ```extract_transform_load``` has additional tasks for cleaning and transforming the Kaggle data such as:
+- Extracting and transforming the Kaggle data into separate DataFrames. The function ```extract_transform_load``` has additional tasks for cleaning and transforming the Kaggle data such as:
 - Fixing columns to the correct data types.
 - Dropping no-value-added columns.
 - Filling missing values.
 - Merging with the Wikipedia movies DataFrame into a ```movies_df``` DataFrame.
 - Finally, merging the MovieLens rating data DataFrame with the ```movies_df``` to create ```movies_with_ratings_df```. 
 
-[Deliverable 4](https://github.com/Aigerim-Zh/Movies-ETL/blob/main/ETL_Deliverable4_create_database.ipynb). Create the Movie Database. The final code to execute the whole ETL pipeline. 
+[Deliverable 4](https://github.com/Aigerim-Zh/Movies-ETL/blob/main/ETL_Deliverable4_create_database.ipynb) 
+- Creating the Movie Database.  
 - The function ```extract_transform_load``` performs the last step of connecting to the SQL database using ```to_sql``` method of the ```sqlalchemy``` library.
+- The final code executes the whole ETL pipeline.
